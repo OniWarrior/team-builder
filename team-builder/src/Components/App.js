@@ -4,6 +4,7 @@ import TeamMemberForm from './TeamMemberForm'
 import axios from '../Axios'
 
 
+
 const initialFormValues = {
   
   username: '',
@@ -25,12 +26,13 @@ export default function App() {
   const submitForm = () => {    
     const newTeamMember = {
       id: Date.now(),
+      name:formValues.name.trim(),
       username: formValues.username.trim(),
       email: formValues.email.trim(),
       role: formValues.role
     }
 
-    setTeamMembers([...teamMembers, newFriend])
+    setTeamMembers([...teamMembers, newTeamMember])
     setForms(initialFormValues)
   }
 
@@ -40,7 +42,7 @@ export default function App() {
 
   return (
     <div className='container'>
-      <h1>Team Member Form App</h1>
+      <h1>Team Member Credentials</h1>
 
       <TeamMemberForm
         

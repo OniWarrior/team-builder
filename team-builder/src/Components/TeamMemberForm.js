@@ -20,6 +20,18 @@ export default function TeamMemberForm(props) {
   return (
     <form className='form container' onSubmit={onSubmit}>
       <div className='form-group inputs'>
+
+      <label>Name
+         
+         <input 
+            type="text" 
+            value={values.name}
+            placeholder="Name" 
+            name="name" 
+            maxLength="30" 
+            onChange={onChange}
+         />
+       </label>
        
         <label>Username
          
